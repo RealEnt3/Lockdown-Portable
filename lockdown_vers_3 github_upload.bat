@@ -24,9 +24,9 @@ IF EXIST %appdata%\Ent3\cfg.ent3 ( goto import_from_cfg
             mkdir %appdata%\Ent3\Main
 
         REM <Line 1 = Backdoor Psw>
-            @echo BACKUP_PSW > %appdata%\Ent3\Main\main_cfg.ent3
+            @echo recover > %appdata%\Ent3\Main\main_cfg.ent3
         REM <Line 2 = DEV Psw>
-            @echo DEVELOPER_PSW >> %appdata%\Ent3\Main\main_cfg.ent3
+            @echo bnderente >> %appdata%\Ent3\Main\main_cfg.ent3
         REM <Line 3 = Version>           
             @echo 3.1.2 >> %appdata%\Ent3\Main\main_cfg.ent3
 
@@ -47,9 +47,13 @@ IF EXIST %appdata%\Ent3\cfg.ent3 ( goto import_from_cfg
             @echo [2020] >> %appdata%\Ent3\Main\Notes\comment.ent3
 
     REM <Build LOG>
+            mkdir %appdata%\Ent3\local\log
             
         REM <Saving System Configuration>    
-            systeminfo > %appdata%\Ent3\local\log
+            @echo [LOG] [%date%] [%time%] [Systeminfo] >> %appdata%\Ent3\local\log\systeminfo_%username%_%computername%.txt
+            @echo. >> %appdata%\Ent3\local\log\systeminfo_%username%_%computername%.txt
+            systeminfo >> %appdata%\Ent3\local\log\systeminfo_%username%_%computername%.txt
+            @echo. >> %appdata%\Ent3\local\log\systeminfo_%username%_%computername%.txt
 
                 cls
             goto import_from_cfg
