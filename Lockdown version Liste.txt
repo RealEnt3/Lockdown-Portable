@@ -1,0 +1,27 @@
+﻿[Version 1]
+- ursprungs code, mit nur einem Passwort (im Code)
+
+[Version 2.1] - 
+- erweiterte Version, Passwort und Backup Passwort 
+  aus externer Datei "var" zur einfachen Verwaltung 
+- Versions Anzeige 
+- Fehlerbehebung zur vorherigen Version
+
+[Version 2.2] - Account System
+- Ergänzung eines Account Systems (Username, Passwort)
+- Fehlerbehebung zur vorherigen Version
+
+[Version 3] - Portable Version
+- Account System durch ein eigenes Setup ersetzt 
+  (Script kann auf jedem belibigen Pc verwendet werden) 
+- Sicherung gegen Fehlfunktion und Script fehler bei der 
+  Verarbeitung der Variablen (Passwörter) 
+  --> (verhindert den Lockdown 
+       ohne gespeicherte/geladene Passwörter)
+- Fehlerbehebung zur vorherigen Version
+- Log Funktion
+  
+
+Gabiel K.
+[28.03.2020]
+[20:55]
